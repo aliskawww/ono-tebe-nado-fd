@@ -260,29 +260,27 @@
   height: 114px;
 }
 
-.about__describe {
+.about__text {
+  width: 693px;
+  height: 312px;
+  display: grid;
+  gap: 24px;
   padding-top: 136px;
-  padding-left: 25px;
-  padding-right: 5px;
 }
 
 .about__title {
+  width: 291px;
+  height: 47px;
   color: #000;
   font-family: "Raleway", serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
   text-transform: uppercase;
-}
-
-.about__text {
-  padding-top: 100px;
-  display: grid;
-  gap: 24px;
+  padding-bottom: 124px;
 }
 
 .about__text-item {
-  display: block;
   color: #000;
   font-family: "Raleway", serif;
   font-weight: 400;
