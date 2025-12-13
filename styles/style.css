@@ -1,9 +1,8 @@
 .header {
-  height: 293px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-content: center;
-  padding: 0 50px 0 50px;
+  padding: 95px 50px 94px 50px;
 }
 
 .header__menu {
@@ -22,6 +21,9 @@
 
 .header__menu-item_active {
   list-style: none;
+}
+
+.header__menu-link_active {
   text-decoration: none;
 }
 
@@ -63,17 +65,22 @@
 
 .cover {
   position: relative;
-  height: 757px;
+  min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .overlay {
+  position: absolute;
   height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
+  position: relative;
   color: #fff;
   text-transform: uppercase;
   font-family: "Raleway", serif;
@@ -83,11 +90,12 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 165px;
+  letter-spacing: 25px;
 }
 
 .accent-span {
   display: block;
-  letter-spacing: 30px;
+  
 }
 
 .text-left {
@@ -102,10 +110,10 @@
 .text-right {
   text-align: right;
   padding-top: 20px;
-  padding-left: 615px;
 }
 
 .cover__description {
+  position: relative;
   padding: 106px 50px 50px 50px;
   color: #fff;
   text-transform: uppercase;
@@ -125,7 +133,7 @@
 .bet-button {
   font-family: "Raleway", serif;
   padding: 12px 32px 11px 31px;
-  margin-left: 107px;
+  margin-left: 105px;
   border: 1px solid #fff;
   font-weight: 500;
   font-size: 22px;
@@ -135,7 +143,7 @@
 }
 
 .lots {
-  height: 723px;
+  min-height: 723px;
   margin: 180px 24px 0 24px;
 }
 
@@ -152,6 +160,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 25px;
+  row-gap: 25px;
   flex-wrap: wrap;
   padding-top: 27px;
   list-style-type: none;
@@ -160,26 +169,24 @@
 }
 
 .lots__card-list-item {
+  display: flex;
   width: 334px;
   min-height: 596px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .card-link {
@@ -188,11 +195,15 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
+  padding-bottom: 48px;
 }
 
 .card__title {
+  position: relative;
   color: #fff;
   text-transform: uppercase;
   font-family: "Raleway", serif;
@@ -200,9 +211,7 @@
   font-size: 22px;
   line-height: 120%;
   text-decoration: underline;
-  padding-left: 40px;
-  padding-top: 48px;
-  padding-right: 40px;
+  padding: 48px 40px 0 40px;
 }
 
 .lots__look-more-link {
@@ -215,6 +224,11 @@
 }
 
 .card__text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
   color: #fff;
   font-family: "Raleway", serif;
   font-weight: 400;
@@ -224,20 +238,8 @@
   padding-right: 40px;
 }
 
-.card__text-type_film {
-  padding-top: 274px;
-}
-
-.card__text-type_book {
-  padding-top: 30px;
-}
-
-.card__text-type_picture {
-  padding-top: 126px;
-}
-
 .about {
-  height: 595px;
+  min-height: 595px;
   display: grid;
   grid-template-columns: 334px auto;
   margin: 120px 24px 0 24px;
@@ -260,24 +262,25 @@
   height: 114px;
 }
 
-.about__text {
-  width: 693px;
-  height: 312px;
+.about__describe {
+  padding-top: 136px;
+  padding-left: 25px;
+}
+
+.about__describe-text {
   display: grid;
   gap: 24px;
-  padding-top: 136px;
 }
 
 .about__title {
   width: 291px;
-  height: 47px;
   color: #000;
   font-family: "Raleway", serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 100%;
   text-transform: uppercase;
-  padding-bottom: 124px;
+  padding-bottom: 83px;
 }
 
 .about__text-item {
@@ -291,7 +294,7 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 180px;
+  min-height: 180px;
   margin: 180px 50px 0 50px;
 }
 
@@ -301,11 +304,11 @@
 }
 
 .footer__menu {
-  height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 115px;
 }
 
 .footer__menu-list {
@@ -313,7 +316,7 @@
   list-style: none;
 }
 
-.footer__menu-item_active {
+.footer__menu-link_active {
   text-decoration: none;
 }
 
